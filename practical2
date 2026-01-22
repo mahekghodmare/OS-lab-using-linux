@@ -1,0 +1,60 @@
+lab-04@lab04-OptiPlex-3280-AIO:~$ mkdir 1090_os_p2
+lab-04@lab04-OptiPlex-3280-AIO:~$ vi program.c
+lab-04@lab04-OptiPlex-3280-AIO:~$ gcc program.c
+lab-04@lab04-OptiPlex-3280-AIO:~$ ./a.out
+Enter a number: 25
+25 is an odd number.
+lab-04@lab04-OptiPlex-3280-AIO:~$ cd 1090_os_p2
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi.program.c
+vi.program.c: command not found
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ gcc program.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ ./a.out
+Enter a number: 90
+90 is an even number.
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program_2.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ gcc program_2.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ ./a.out
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program_3.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ gcc program_3.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ ./a.out
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program_3.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ gcc program_3.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ ./a.out
+Hello
+Hello
+Hello
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program_4.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ gcc program_4.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ ./a.out
+1
+2
+3
+4
+5
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ vi program_5.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ gcc program_5.c
+lab-04@lab04-OptiPlex-3280-AIO:~/1090_os_p2$ ./a.out
+Enter a year: 2016
+2016 is a Leap Year.
