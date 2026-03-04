@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, time = 0, completed = 0, max_index;
+    
+    printf("Enter number of processes: ");
+    scanf("%d", &n);
+
+    int pid[n], at[n], bt[n];
+    int rt[n], ct[n], wt[n], tat[n];
+
+    float total_wt = 0, total_tat = 0;
+
+    // Input
+    for(i = 0; i < n; i++) {
+        printf("\nProcess %d\n", i+1);
+        pid[i] = i + 1;
+        printf("Arrival Time: ");
+        scanf("%d", &at[i]);
+        printf("Burst Time: ");
+        scanf("%d", &bt[i]);
+        rt[i] = bt[i];   // Initialize remaining time
+    }
+
+    // LRT Scheduling
+    while(completed != n) {
+        int max_rt = -1;
+        max_index = -1;
+
+        for(i = 0; i < n; i++) {
+            if(at[i] <= time && rt[i] > 0) {
+                if(rt[i] > max_rt) {
+                    max_rt = rt[i];
+                    max_index = i;
+                }
+            }
+        }
+
+        if(max_index != -1) {
+            rt[max_index]--;
+            time++;
+
+            if(rt[max_index] == 0) {
+                completed++;
+                ct[max_index] = time;
+                tat[max_index] = ct[max_index] - at[max_index];
+                wt[max_index] = tat[max_index] - bt[max_index];
+
+                total_tat += tat[max_index];
+                total_wt += wt[max_index];
+            }
+        } else {
+            time++;   // If no process has arrived yet
+        }
+    }
+
+    // Output Table
+    printf("\nPID\tAT\tBT\tCT\tTAT\tWT\n");
+
+    for(i = 0; i < n; i++) {
+        printf("%d\t%d\t%d\t%d\t%d\t%d\n",
+               pid[i], at[i], bt[i],
+               ct[i], tat[i], wt[i]);
+    }
+
+    // Averages
+    printf("\nAverage Turnaround Time (ATAT) = %.2f", total_tat / n);
+    printf("\nAverage Waiting Time (AWT) = %.2f\n", total_wt / n);
+
+    return 0;
+}
