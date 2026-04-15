@@ -1,0 +1,113 @@
+shell script using case (switch) to perform Addition, Subtraction, Multiplication, and Division:
+#!/bin/bash
+
+echo "Enter first number:"
+read num1
+
+echo "Enter second number:"
+read num2
+
+echo "Choose operation:"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+echo "4. Division"
+read choice
+
+case $choice in
+    1)
+        result=$((num1 + num2))
+        echo "Result = $result"
+        ;;
+    2)
+        result=$((num1 - num2))
+        echo "Result = $result"
+        ;;
+    3)
+        result=$((num1 * num2))
+        echo "Result = $result"
+        ;;
+    4)
+        if [ $num2 -ne 0 ]; then
+            result=$((num1 / num2))
+            echo "Result = $result"
+        else
+            echo "Error: Division by zero is not allowed"
+        fi
+        ;;
+    *)
+        echo "Invalid choice"
+        ;;
+esac
+
+
+shell script using case (switch) to check whether a year is a leap year or not
+#!/bin/bash
+
+echo "Enter a year:"
+read year
+
+# Calculate conditions
+rem4=$((year % 4))
+rem100=$((year % 100))
+rem400=$((year % 400))
+
+case 1 in
+    $((rem4 == 0 && rem100 != 0 || rem400 == 0)))
+        echo "$year is a Leap Year"
+        ;;
+    *)
+        echo "$year is NOT a Leap Year"
+        ;;
+esac
+
+shell script using case (switch) to check whether a number is odd or even:
+#!/bin/bash
+
+echo "Enter a number:"
+read num
+
+rem=$((num % 2))
+
+case $rem in
+    0)
+        echo "$num is Even"
+        ;;
+    1|-1)
+        echo "$num is Odd"
+        ;;
+    *)
+        echo "Invalid input"
+        ;;
+esac
+
+shell script using case (switch) to find the greatest of two numbers:
+#!/bin/bash
+
+echo "Enter first number:"
+read num1
+
+echo "Enter second number:"
+read num2
+
+# Compare numbers
+result=$((num1 > num2))
+
+case $result in
+    1)
+        echo "$num1 is greater than $num2"
+        ;;
+    0)
+        case $((num1 == num2)) in
+            1)
+                echo "Both numbers are equal"
+                ;;
+            0)
+                echo "$num2 is greater than $num1"
+                ;;
+        esac
+        ;;
+    *)
+        echo "Invalid input"
+        ;;
+esac
