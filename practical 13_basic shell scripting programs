@@ -1,0 +1,103 @@
+Addition Script
+#!/bin/bash
+
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+sum=$((a + b))
+
+echo "Sum = $sum"
+
+
+
+Subtraction Script
+#!/bin/bash
+
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+diff=$((a - b))
+
+echo "Difference = $diff"
+
+
+
+Division Script
+#!/bin/bash
+
+echo "Enter numerator:"
+read a
+
+echo "Enter denominator:"
+read b
+
+if [ $b -eq 0 ]; then
+  echo "Division by zero not allowed"
+else
+  result=$((a / b))
+  echo "Quotient = $result"
+fi
+
+
+
+Even or Odd Check
+#!/bin/bash
+
+echo "Enter a number:"
+read n
+
+if (( n % 2 == 0 )); then
+  echo "$n is Even"
+else
+  echo "$n is Odd"
+fi
+
+
+
+Grade Finder
+#!/bin/bash
+
+echo "Enter marks:"
+read m
+
+if [ $m -ge 90 ]; then
+  echo "Grade: A"
+elif [ $m -ge 75 ]; then
+  echo "Grade: B"
+elif [ $m -ge 60 ]; then
+  echo "Grade: C"
+elif [ $m -ge 40 ]; then
+  echo "Grade: D"
+else
+  echo "Grade: Fail"
+fi
+
+
+
+Largest Among Three Numbers
+#!/bin/bash
+
+echo "Enter first number:"
+read a
+
+echo "Enter second number:"
+read b
+
+echo "Enter third number:"
+read c
+
+if [ $a -ge $b ] && [ $a -ge $c ]; then
+  echo "$a is the largest"
+elif [ $b -ge $a ] && [ $b -ge $c ]; then
+  echo "$b is the largest"
+else
+  echo "$c is the largest"
+fi
+
+
